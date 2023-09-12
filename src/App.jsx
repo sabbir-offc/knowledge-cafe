@@ -11,15 +11,19 @@ function App() {
     setBookmarks(newBookmarks);
   };
   const [readingTimes, setReadingTimes] = useState(0);
-  const handleMarkAsRead = (time) => {
+  const handleMarkAsRead = (time, id) => {
     const newReadingTimes = readingTimes + time;
     setReadingTimes(newReadingTimes);
+
+    // remove items
+    const remainingBlogs = bookmarks.filter((bookmark) => bookmark.id !== id);
+    setBookmarks(remainingBlogs);
   };
 
   return (
     <div className="container mx-auto py-4">
       <Header></Header>
-      <div className="md:flex gap-6">
+      <div className="md:flex gap-6 relative">
         <Blogs
           handleToAddBookmark={handleToAddBookmark}
           handleMarkAsRead={handleMarkAsRead}

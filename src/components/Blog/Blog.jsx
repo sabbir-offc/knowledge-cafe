@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { FaRegBookmark } from "react-icons/fa";
 const Blog = ({ blog, handleToAddBookmark, handleMarkAsRead }) => {
   const {
+    id,
     title,
     cover,
     author,
@@ -59,7 +60,7 @@ const Blog = ({ blog, handleToAddBookmark, handleMarkAsRead }) => {
           </p>
           <div className="card-actions justify-start">
             <button
-              onClick={() => handleMarkAsRead(reading_time)}
+              onClick={() => handleMarkAsRead(reading_time, id)}
               className="text-xl text-[#6047EC] underline"
             >
               Mark As Read

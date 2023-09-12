@@ -11,7 +11,7 @@ const Blogs = ({ handleToAddBookmark, handleMarkAsRead }) => {
       .then((data) => setBlogs(data));
   }, []);
   return (
-    <div className="md:w-2/3">
+    <div className="md:w-2/3 px-3">
       <h2 className="text-3xl mt-2 font-semibold text-black dark:text-white">
         Blogs
       </h2>
