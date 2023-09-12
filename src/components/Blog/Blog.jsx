@@ -1,5 +1,6 @@
-import PropTypes from "prop-types"; // ES6
-const Blog = ({ blog }) => {
+import PropTypes from "prop-types";
+import { FaRegBookmark } from "react-icons/fa";
+const Blog = ({ blog, handleToAddBookmark }) => {
   const {
     title,
     cover,
@@ -9,15 +10,19 @@ const Blog = ({ blog }) => {
     hashtags,
     reading_time,
   } = blog;
-  console.log(blog);
+  // console.log(blog);
   return (
-    <div>
+    <div className="my-9 shadow-lg dark:shadow-slate-400 rounded-md">
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={cover} alt={`cover picture of - ${title}`} />
+          <img
+            src={cover}
+            alt={`cover picture of - ${title}`}
+            className="mb-5"
+          />
         </figure>
         <div className="card-body">
-          <div className="flex gap-4 items-center justify-between">
+          <div className="flex items-center justify-between">
             <div className="flex gap-6 items-center">
               <div className="avatar">
                 <div className="w-14 rounded-full">
@@ -25,18 +30,26 @@ const Blog = ({ blog }) => {
                 </div>
               </div>{" "}
               <div>
-                <h3 className="font-bold text-2xl text-black dark:text-white">
+                <h3 className="font-bold text-xl md:text-2xl text-black dark:text-white">
                   {author}
                 </h3>
                 <p>{posted_date}</p>
               </div>
             </div>
-            <div>
+            <div className="flex items-center gap-1">
               <p>{reading_time} minute read</p>
+              <button
+                className="text-xl"
+                onClick={() => handleToAddBookmark(blog)}
+              >
+                <FaRegBookmark></FaRegBookmark>
+              </button>
             </div>
           </div>
 
-          <h2 className="card-title text-4xl font-bold my-4">{title}</h2>
+          <h2 className="card-title text-2xl md:text-4xl font-bold my-4 text-black dark:text-white">
+            {title}
+          </h2>
           <p>
             {hashtags.map((hash, idx) => (
               <span key={idx}>
@@ -44,6 +57,11 @@ const Blog = ({ blog }) => {
               </span>
             ))}
           </p>
+          <div className="card-actions justify-start">
+            <button className="text-xl text-[#6047EC] underline">
+              Mark As Read
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -52,5 +70,6 @@ const Blog = ({ blog }) => {
 
 Blog.propTypes = {
   blog: PropTypes.object.isRequired,
+  handleToAddBookmark: PropTypes.func,
 };
 export default Blog;
