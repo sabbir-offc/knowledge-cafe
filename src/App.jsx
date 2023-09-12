@@ -10,13 +10,25 @@ function App() {
     const newBookmarks = [...bookmarks, blog];
     setBookmarks(newBookmarks);
   };
+  const [readingTimes, setReadingTimes] = useState(0);
+  const handleMarkAsRead = (time) => {
+    const newReadingTimes = readingTimes + time;
+    setReadingTimes(newReadingTimes);
+  };
 
   return (
     <div className="container mx-auto py-4">
       <Header></Header>
       <div className="md:flex gap-6">
-        <Blogs handleToAddBookmark={handleToAddBookmark}></Blogs>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+        <Blogs
+          handleToAddBookmark={handleToAddBookmark}
+          handleMarkAsRead={handleMarkAsRead}
+        ></Blogs>
+
+        <Bookmarks
+          bookmarks={bookmarks}
+          readingTimes={readingTimes}
+        ></Bookmarks>
       </div>
     </div>
   );
