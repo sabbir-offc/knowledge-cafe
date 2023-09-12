@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "A Guide to JavaScript Promises",
+    "cover": "https://i.ibb.co/pbXp7YK/5396346.jpg",
+    "author": "John Doe",
+    "author_img": "https://i.ibb.co/W3TFvF2/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "posted_date": "Mar 14 (4 Days ago)",
+    "hashtags": ["#JavaScript", "#Promises"],
+    "reading_time": 10
+  },
+  {
+    "id": 2,
+    "title": "Building Modern Web Apps with React",
+    "cover": "https://i.ibb.co/5vJBnQS/vlogger-using-smartphone-record-video-vlog-channel.jpg",
+    "author": "Jane Smith",
+    "author_img": "https://i.ibb.co/5RHkTjV/alex-suprun-ZHv-M3-XIOHo-E-unsplash.jpg",
+    "posted_date": "Mar 15 (3 Days ago)",
+    "hashtags": ["#React", "#WebDevelopment"],
+    "reading_time": 15
+  },
+  {
+    "id": 3,
+    "title": "Getting Started with Vue.js",
+    "cover": "https://i.ibb.co/TrQPPhq/business-women-signature-document.jpg",
+    "author": "David Johnson",
+    "author_img": "https://i.ibb.co/W3TFvF2/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "posted_date": "Mar 16 (2 Days ago)",
+    "hashtags": ["#Vue", "#Frontend"],
+    "reading_time": 12
+  },
+  {
+    "id": 4,
+    "title": "Responsive Web Design Best Practices",
+    "cover": "https://i.ibb.co/pbXp7YK/5396346.jpg",
+    "author": "Emily Brown",
+    "author_img": "https://i.ibb.co/pXbTsts/jake-nackos-IF9-TK5-Uy-KI-unsplash.jpg",
+    "posted_date": "Mar 17 (1 Day ago)",
+    "hashtags": ["#WebDesign", "#UI"],
+    "reading_time": 8
+  },
+  {
+    "id": 5,
+    "title": "Introduction to Node.js and Express",
+    "cover": "https://i.ibb.co/TrQPPhq/business-women-signature-document.jpg",
+    "author": "Michael Wilson",
+    "author_img": "https://i.ibb.co/W3TFvF2/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "posted_date": "Mar 18 (Today)",
+    "hashtags": ["#Node.js", "#Express"],
+    "reading_time": 14
+  }
+]
