@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="container mx-auto py-4">
       <Header></Header>
-      <div className="md:flex">
+      <div className="md:flex gap-6">
         <Blogs handleToAddBookmark={handleToAddBookmark}></Blogs>
         <Bookmarks bookmarks={bookmarks}></Bookmarks>
       </div>
